@@ -1,12 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font aswsome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>My Text editor</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body class="bg-gray-200">
+    <header>
+      <div class="bg-gray-100 min-h-[500px] mt-48 p-20">
+        <h1 class="font-bold text-4xl mb-12 text-center">
+          My text <span class="text-violet-300">editor</span>
+        </h1>
+        <!-- styles -->
+        <div class="flex justify-between list-none py-2 ">
+          <!-- text styles -->
+          <div class="flex">
+            <li id="text-bold" class="text-xl a pointer cursor-pointer p-1">
+              <i class="fa-solid fa-bold"></i>
+            </li>
+            <li id="text-italic"  class="text-xl  cursor-pointer p-1">
+              <i class="fa-solid fa-italic"></i>
+            </li>
+            <li id="text-underline" class="text-xl  cursor-pointer p-1">
+              <i class="fa-solid fa-underline"></i>
+            </li>
+          </div>
+          <!-- text align -->
+          <div class="flex">
+            <li id="align-left" class="text-xl active:bg-violet-300 pointer cursor-pointer p-1">
+              <i class="fa-solid fa-align-right"></i>
+            </li>
+            <li id="align-center" class="text-xl active:bg-violet-300 pointer cursor-pointer p-1">
+              <i class="fa-solid fa-align-center"></i>
+            </li>
+            <li id="align-right" class="text-xl active:bg-violet-300 pointer cursor-pointer p-1">
+              <i class="fa-solid fa-align-left"></i>
+            </li>
+            <li id="align-justify" class="text-xl active:bg-violet-300 pointer cursor-pointer p-1">
+              <i class="fa-solid fa-align-justify"></i>
+            </li>
+          </div>
+          <!-- text colors & font sizes -->
+          <div class="flex">
+            <div class="custom-select">
+              <select id="font-size">
+                <option>fontSize:</option>
+                <option value="5">5</option>
+                <option value="7">7</option>
+                <option value="9">9</option>
+                <option value="11">11</option>
+                <option value="13">13</option>
+                <option value="15">15</option>
+                <option value="17">17</option>
+                <option value="19">19</option>
+                <option value="21">21</option>
+                <option value="23">23</option>
+                <option value="25">25</option>
+                <option value="27">27</option>
+                <option value="37">37</option>
+                <option value="45">45</option>
+                <option value="50">50</option>
+                <option value="55">55</option>
+                <option value="57">57</option>
+                <option value="60">60</option>
+                <option value="65">65</option>
+                <option value="72">72</option>
+              </select>
+            </div>
+            <li><input  id="color-input" type="color"/></li>
+          </div>
+        </div>
+      <div>
+        <textarea
+        style="resize: none;"
+        class="bg-white w-full p-3 h-[500px]"
+        id="text"
+      ></textarea>
+      </div>
+      </div>
+    </header>
+
+    <!-- Link javascript file -->
+    <script src="./index.js"></script>
+  </body>
 </html>
